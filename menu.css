@@ -1,0 +1,121 @@
+*{
+    margin:0; padding:0; 
+    font-size: 16px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: #f0f0f0f0;
+}
+.image{
+    margin-left: 100px; 
+}
+.image img{
+    height: 45px;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: white;
+    box-shadow: 0 4px 8px 0 rgba(0,0,0,0.1);
+    padding: 10px; 
+}
+.menu{
+    display: flex;
+    list-style: none;
+    gap: 50px; 
+}
+.menu li a{
+    display: block;
+    padding: 15px; 
+    text-decoration: none;
+    color: black; 
+    font-weight: bold;
+    transition: color 0.3s;
+}
+.menu li a:hover{
+    text-decoration: underline;
+    color: red; 
+}
+.icons{
+    display: flex;
+    justify-content:center; 
+    align-items: center;
+    gap: 40px; 
+    margin-right: 10px;
+  
+}
+.icons div{
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px; 
+    border-radius: 50%;
+    cursor: pointer; 
+}
+.icons i{
+    font-size: 25px;
+}
+.search{
+    background-color: aqua;
+    border: 4px solid #f8f8f8;
+}
+.icons div:hover{
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}
+.user{
+    background-color: #a2d9e4;
+    border: 4px solid #91cbd8; 
+}
+.cart{
+    background-color: #f5d1d1; 
+    border: 4px solid #e0b8b8; 
+}
+.thanh-menu{
+   display: none;
+   margin-right: 40px;
+}
+.thanh-menu i{
+    font-size: 30px;
+    cursor: pointer;
+}
+
+
+@media screen and (max-width: 768px) {
+    .side-menu {
+        display: none;
+    }
+
+    #thanh-menu {
+        display: block; 
+    }
+
+    .side-menu.active {
+        display: block;
+        position: fixed;
+        left: 0;
+        top: 0;
+        width: 250px;
+        height: 100%;
+        background-color: white;
+        box-shadow: 2px 0 5px rgba(0, 0, 0, 0.5);
+        transition: left 0.6s ease;
+        padding-top: 5px;
+        z-index: 1000;
+        text-align: center;
+    }
+
+    .menu {
+        flex-direction: column;
+    }
+
+    .menu li a {
+        padding: 8px 15px; /* Giảm padding trên và dưới */
+    margin: 0; /* Loại bỏ margin nếu có */
+        display: block;
+    }
+}
